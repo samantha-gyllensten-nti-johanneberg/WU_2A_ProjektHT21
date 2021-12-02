@@ -4,7 +4,26 @@
     box-sizing: border-box;
 }
 
+.gridWrapper {
+    display: grid;
+    width: 100vw;
+    height: 1000px;
+    grid-template-areas: 
+    "he he he he he"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "fo fo fo fo fo"
+;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(8, 1fr);
+}
+
 header {
+    grid-area: he;
     background: yellow;
     height: 100px;
     display: flex;
@@ -14,7 +33,7 @@ header {
 
 nav {
     display: flex;
-    width: 300px;
+    width: 450px;
     height: auto;
     margin: 20px;
     align-items: center;
@@ -47,4 +66,12 @@ nav {
     width: 50px;
     margin: 5px;
     border-radius: 10px;
+}
+
+footer {
+    grid-area: fo;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: turquoise;
 }
