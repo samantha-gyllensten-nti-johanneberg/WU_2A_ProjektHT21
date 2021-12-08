@@ -7,7 +7,6 @@
 #gridWrapperIndex {
     display: grid;
     width: 100vw;
-    height: 1000px;
     grid-template-areas: 
     "he he he he he"
     "s1 s1 s1 s1 s1"
@@ -70,6 +69,7 @@ nav {
     "s2"
     "s3"
     ;
+    height: 800px;
 }
 #section1 {
     grid-area: s2;
