@@ -19,10 +19,11 @@ grid-template-rows: 100px minmax(100px, 1fr) 150px;
 
 header {
     grid-area: he;
-    background: yellow;
+    background: rgb(7, 8, 9);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #ffffcc;
 }
 
 nav {
@@ -44,7 +45,7 @@ nav {
 
 .meny_link {
     text-decoration: none;
-    color: black;
+    color: #ffffcc;
     font-family:'Times New Roman', Times, serif; 
     /* change font later */
     font-size: 20px;
@@ -52,10 +53,11 @@ nav {
 
 .meny_link:hover {
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .hamburger_line {
-    background: black;
+    background: #ffffcc;
     height: 7px;
     width: 50px;
     margin: 5px;
@@ -69,7 +71,6 @@ nav {
     "s2"
     "s3"
     ;
-    height: 800px;
 }
 #section1 {
     grid-area: s2;
@@ -77,7 +78,22 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content:center;
-    background: red;
+    background-image: linear-gradient(red, yellow);
+    height: 300px;
+}
+
+#boka_bord {
+    text-decoration: none;
+    color: black;
+    height: 20px;
+    width: 50px;
+    outline: purple;
+    background: pink;
+}
+
+#boka_bord:hover {
+    font-weight: bold;
+    color: black;
 }
 
 h1 {
@@ -90,8 +106,8 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: orange;
-
+    height: 400px;
+    background: #49111C;
 }
 
 #food_pictures {
@@ -101,7 +117,6 @@ h1 {
     justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
-    background: blue;
 }
 
 footer {
@@ -110,11 +125,75 @@ footer {
     padding: 20px;
     align-items: top;
     justify-content: space-between;
-    background: turquoise;
+    background: rgb(7, 8, 9);
 }
 
-.fff1 {
+.meny_img {
     width: 200px;
-    height:auto;
+    height:300px;
     margin: 10px;
+}
+
+#gridWrapperMeny {
+    display: grid;
+    width: 100vw;
+    grid-template-areas: 
+    "he he he he"
+    "s1 s1 s1 s1"
+    "di s4 s4 s4"
+    "di s4 s4 s4"
+    "d2 d2 d2 d2"
+    "fo fo fo fo"
+;
+grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+grid-template-rows: 100px minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) 150px;
+}
+
+#Top {
+    grid-area: s1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration:underline;
+    background: green;
+}
+
+#sideWrapper {
+    grid-area: di;
+    display: grid;
+    grid-template-areas: 
+    "s2"
+    "s3"
+    ;
+    background: darkorange;
+}
+
+#bottomWrapper {
+    display: grid;
+    grid-template-areas: 
+    "s5 s6"
+    ;
+    grid-area: d2;
+    background: darkorange;
+}
+
+#forratter {
+    grid-area: s2;
+    background: rebeccapurple;
+}
+#sides {
+    grid-area: s3;
+    background: yellowgreen;
+}
+#huvudratter {
+    grid-area: s4;
+    background: red;
+}
+#efterratter {
+    grid-area: s5;
+    background: blue;
+}
+#drycker {
+    grid-area: s6;
+    background: cyan;
 }
