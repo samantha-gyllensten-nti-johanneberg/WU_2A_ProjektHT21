@@ -231,10 +231,10 @@ color: #ffffcc;
 #gridWrapperAboutUs {
     display: grid;
     grid-template-areas: 
-    "he he"
-    "s1 s1"
-    "s2 s2"
-    "fo fo"
+    "he"
+    "s1"
+    "s2"
+    "fo"
 ;
 grid-template-columns: minmax(700px, 1fr);
 grid-template-rows: 100px 150px minmax(600px, 1fr) 150px;
