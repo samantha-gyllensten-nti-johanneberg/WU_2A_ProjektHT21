@@ -1,20 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Libre+Franklin:wght@100&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#gridWrapperIndex {
-    display: grid;
-    width: 100vw;
-    grid-template-areas: 
-    "he he he he he"
-    "s1 s1 s1 s1 s1"
-    "s1 s1 s1 s1 s1"
-    "fo fo fo fo fo"
-;
-grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
-grid-template-rows: 100px minmax(100px, 1fr) 150px;
+h1 {
+    font-size: 3.4rem;
+    font-family: 'IM Fell English SC', serif;
+}
+
+h2 {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.75rem;
+    color: #ffffcc;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.3125rem;
+}
+
+p {
+    line-height: 25px;
+    font-size: 0.8125rem;
+    font-family: 'Libre Franklin', sans-serif;
 }
 
 header {
@@ -24,11 +36,17 @@ header {
     align-items: center;
     justify-content: space-between;
     color: #ffffcc;
+    border-bottom: solid 2px #ffffcc;
+}
+
+#logga_img {
+    width: 100px;
+    height: auto;
 }
 
 nav {
     display: flex;
-    width: 450px;
+    width: 500px;
     height: auto;
     margin: 20px;
     align-items: center;
@@ -38,7 +56,7 @@ nav {
 #link_list {
     list-style: none;
     display: flex;
-    width: 400px;
+    width: 450px;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -46,14 +64,12 @@ nav {
 .meny_link {
     text-decoration: none;
     color: #ffffcc;
-    font-family:'Times New Roman', Times, serif; 
-    /* change font later */
-    font-size: 20px;
+    font-size: 2.125rem;
+    font-family: 'IM Fell English SC', serif;
 }
 
 .meny_link:hover {
-    font-weight: bold;
-    text-decoration: underline;
+    color: #cf0000;
 }
 
 .hamburger_line {
@@ -64,98 +80,108 @@ nav {
     border-radius: 10px;
 }
 
-#welcome_landing {
-    grid-area: s1;
+#gridWrapperIndex {
     display: grid;
     grid-template-areas: 
+    "he"
+    "s1"
     "s2"
-    "s3"
-    ;
+    "fo"
+;
+grid-template-columns: minmax(700px, 1fr);
+grid-template-rows: 100px 400px minmax(700px, 1fr) 150px;
 }
-#section1 {
-    grid-area: s2;
+
+#indexWelcomeLanding {
+    grid-area: s1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
-    background-image: linear-gradient(red, yellow);
-    height: 300px;
+    background-image: url("../img/Background_final.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffcc;
+    border-bottom:solid 2px #ffffcc;
 }
 
-#boka_bord {
+#bookTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    height: 50px;
+    width: 200px;
+    background: #ffffcc;
+    color: rgb(7, 8, 9);
     text-decoration: none;
-    color: black;
-    height: 20px;
-    width: 50px;
-    outline: purple;
-    background: pink;
+    border-radius: 30px;
 }
 
-#boka_bord:hover {
-    font-weight: bold;
-    color: black;
+#menuButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    height: 75px;
+    width: 250px;
+    background: #920000;
+    border: 2px solid #ffffcc;
+    border-radius: 15px 5px;
+    color: #ffffcc;
+    text-decoration: none;
 }
 
-h1 {
-    font-size: 50px;
-}
-
-#section2 {
-    grid-area: s3;
+#indexMenuSection {
+    grid-area: s2;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 400px;
-    background: #49111C;
+    background:rgb(7, 8, 9);
 }
 
-#food_pictures {
+#foodPictureWrapper {
     display: flex;
-    width: 1000px;
+    width: 75%;
     list-style: none;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: row;
-    align-items: center;
+    align-content: center;
 }
 
-footer {
-    grid-area: fo;
-    display: flex;
-    padding: 20px;
-    align-items: top;
-    justify-content: space-between;
-    background: rgb(7, 8, 9);
-}
-
-.meny_img {
+.menu_img {
     width: 200px;
-    height:300px;
-    margin: 10px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 50px;
+    border: 2px solid #ffffcc;
 }
 
-#gridWrapperMeny {
+#gridWrapperMenu {
     display: grid;
-    width: 100vw;
     grid-template-areas: 
     "he he he he"
     "s1 s1 s1 s1"
     "di s4 s4 s4"
     "di s4 s4 s4"
-    "d2 d2 d2 d2"
+    "s5 s5 s6 s6"
     "fo fo fo fo"
 ;
-grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
-grid-template-rows: 100px minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) 150px;
+grid-template-columns: minmax(175px, 1fr) minmax(175px, 1fr) minmax(175px, 1fr) minmax(175px, 1fr);
+grid-template-rows: 100px 150px minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr) 150px;
+color: #ffffcc;
 }
 
-#Top {
+#topMenu {
     grid-area: s1;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration:underline;
-    background: green;
+    background: #920000;
+    color: #ffffcc;
+    border-bottom: solid 2px #ffffcc;
 }
 
 #sideWrapper {
@@ -164,36 +190,101 @@ grid-template-rows: 100px minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1f
     grid-template-areas: 
     "s2"
     "s3"
+    "s3"
     ;
-    background: darkorange;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
-#bottomWrapper {
-    display: grid;
-    grid-template-areas: 
-    "s5 s6"
-    ;
-    grid-area: d2;
-    background: darkorange;
-}
-
-#forratter {
+#starters {
     grid-area: s2;
-    background: rebeccapurple;
+    background: rgb(7, 8, 9);
+    padding: 10px;
+    border-bottom: dotted 2px #ffffcc;
+    border-right: dotted 2px #ffffcc;
 }
 #sides {
     grid-area: s3;
-    background: yellowgreen;
+    background: rgb(7, 8, 9);
+    padding: 10px;
+    border-bottom: dotted 2px #ffffcc;
+    border-right: dotted 2px #ffffcc;
 }
-#huvudratter {
+#mainCourse {
     grid-area: s4;
-    background: red;
+    background: rgb(7, 8, 9);
+    padding: 10px;
+    border-bottom: dotted 2px #ffffcc;
 }
-#efterratter {
+#desserts {
     grid-area: s5;
-    background: blue;
+    background: rgb(7, 8, 9);
+    padding: 10px;
+    border-right: dotted 2px #ffffcc;
 }
-#drycker {
+#drinks {
     grid-area: s6;
-    background: cyan;
+    background: rgb(7, 8, 9);
+    padding: 10px;
+}
+
+#gridWrapperAboutUs {
+    display: grid;
+    grid-template-areas: 
+    "he he"
+    "s1 s1"
+    "s2 s2"
+    "fo fo"
+;
+grid-template-columns: minmax(700px, 1fr);
+grid-template-rows: 100px 150px minmax(600px, 1fr) 150px;
+}
+
+#topAboutUs {
+    grid-area: s1;
+    background: #920000;
+    color: #ffffcc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 2px #ffffcc;
+}
+
+#innerAboutUsWrapper {
+    grid-area: s2;
+    background: rgb(7, 8, 9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#aboutUsText1 {
+    color:#ffffcc;
+    padding: 20px;
+    line-height: 20px;
+}
+
+#aboutUsText2 {
+    color:#ffffcc;
+    padding: 20px;
+    line-height: 20px;
+}
+
+#aboutUsText3 {
+    color:#ffffcc;
+    padding: 20px;
+    line-height: 20px;
+}
+
+footer {
+    grid-area: fo;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    background:rgb(7, 8, 9);
+    border-top: 2px dashed #ffffcc;
+    color: #ffffcc;
+    text-decoration: none;
 }
